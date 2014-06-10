@@ -1,3 +1,4 @@
+
 # generator-sqangular [![Build Status](https://secure.travis-ci.org/taylorharwin/generator-sqangular.png?branch=master)](https://travis-ci.org/taylorharwin/generator-sqangular)
 
 > [Yeoman](http://yeoman.io) generator
@@ -45,3 +46,9 @@ If you'd like to get to know Yeoman better and meet some of his friends, [Grunt]
 ## License
 
 MIT
+=======
+sqangular
+=========
+
+A yeoman generator for Angular/Express/MySQL stacks
+
