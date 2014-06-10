@@ -1,0 +1,14 @@
+{
+  "name": "package",
+  "version": "0.0.0",
+  "dependencies": {
+  	"bootstrap": "*",
+    "angular": "*", 
+    "angular-route": "*",
+    "angular-touch": "*",
+    "angular-cookies": "*",
+    "ng-Fx": "*",
+    "angular-ui-router": "*"
+  }
+}
+
