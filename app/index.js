@@ -26,7 +26,7 @@ var SqangularGenerator = yeoman.generators.Base.extend({
     var prompts = [{
       type: 'confirm',
       name: 'someOption',
-      message: 'This generator has no options, as we wanted to provide the best implementations of Sass, MySql, and Angular. We wanted to make sure you were cool with that.',
+      message: 'This generator has no options. It provides you a starting point with Less, PostgreSQL, and Angular. Are you cool with that?',
       default: true
     }, {
       type: 'input',
@@ -43,9 +43,16 @@ var SqangularGenerator = yeoman.generators.Base.extend({
   },
 
   app: function () {
-    this.mkdir('app');
-    this.mkdir('app/templates');
-    this.mkdir('app/templates/server');
+    this.mkdir('client');
+    this.mkdir('dist');
+    this.mkdir('test');
+    this.copy('._gitignore', '.gitignore');
+    this.copy('._bowerrc.json', '.bowerrc');
+    this.copy('_package.json', 'package.json');
+    this.copy('_bower.json', 'bower.json');
+    this.copy('_gulpfile.js', 'gulpfile.js');
+
+    this.mkdir('server');
     this.copy('server/_schema.sql', 'server/schema.sql');
     this.copy('server/_server.js', 'server/server.js');
     this.copy('server/main/_app.js', 'server/main/app.js');
@@ -54,28 +61,25 @@ var SqangularGenerator = yeoman.generators.Base.extend({
     this.copy('server/extra/_extra_controllers.js', 'server/extra/extra_controllers.js');
     this.copy('server/extra/_extra_model.js', 'server/extra/extra_routes.js');
     this.copy('server/extra/_extra_model.js', 'server/extra/extra_model.js');
-    this.copy('client/styles/css/_app.css', 'client/styles/css/app.css');
-    this.template('client/_index.html', 'client/index.html');
+
     this.template('client/_app.js', 'client/app.js');
-    this.template('client/main/_main.tpl.html', 'client/main/main.tpl.html');
-    this.template('client/main/_main.js', 'client/main/main.js');
-    this.template('client/extra/_extra.tpl.html', 'client/extra/extra.tpl.html');
-    this.template('client/extra/_extra.js', 'client/extra/extra.js');
-  
+    this.template('client/_index.html', 'client/index.html');
+    this.mkdir('client/src');
+    this.mkdir('client/assets');
+    this.copy('client/assets/styles/_main.less', 'client/assets/styles/main.less');
+    this.mkdir('client/assets/styles/partials');
+    this.mkdir('client/assets/fonts');
 
+    this.mkdir('client/src/common');
+    this.mkdir('client/src/pages');
 
+    this.mkdir('client/src/common/directives');
+    this.mkdir('client/src/common/services');
 
-
-
-
-
-    this.mkdir('app/templates/client');
-    this.mkdir('app/templates/styles');
-    this.mkdir('app/templates/server/main');
-    this.mkdir('app/templates/server/extra');
-
-    this.copy('_package.json', 'package.json');
-    this.copy('_bower.json', 'bower.json');
+    this.mkdir('client/src/pages/controllers');
+    this.mkdir('client/src/pages/directives');
+    this.mkdir('client/src/pages/services');
+    this.mkdir('client/src/pages/templates');
   },
 
   projectfiles: function () {
