@@ -28,11 +28,16 @@ var SqangularGenerator = yeoman.generators.Base.extend({
       name: 'someOption',
       message: 'This generator has no options, as we wanted to provide the best implementations of Sass, MySql, and Angular',
       default: true
+    }, {
+      type: 'input',
+      name: 'name',
+      message: 'What is the name of your application?',
+      default: 'APP'
     }];
 
-    this.prompt(prompts, function (props) {
-      this.someOption = props.someOption;
-
+    this.prompt(prompts, function (prop) {
+        
+      this.name = prop.name;
       done();
     }.bind(this));
   },
