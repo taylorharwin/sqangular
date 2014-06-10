@@ -26,7 +26,7 @@ var SqangularGenerator = yeoman.generators.Base.extend({
     var prompts = [{
       type: 'confirm',
       name: 'someOption',
-      message: 'This generator has no options, as we wanted to provide the best implementations of Sass, MySql, and Angular',
+      message: 'This generator has no options, as we wanted to provide the best implementations of Sass, MySql, and Angular. We wanted to make sure you were cool with that.',
       default: true
     }, {
       type: 'input',

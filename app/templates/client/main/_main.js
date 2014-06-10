@@ -1,7 +1,7 @@
 (function (angular) {
   "use strict";
   angular.module('<%= name %>.main', ['ngRoute', '<%= name %>.main.extra'])
-  .config(function (<%= providers %>) {
+  .config(function ($stateProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'main/main.tpl.html',

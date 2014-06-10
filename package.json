@@ -1,42 +1,26 @@
 {
-  "name": "generator-sqangular",
+  "name": "package",
   "version": "0.0.0",
-  "description": "Yeoman generator",
-  "license": "MIT",
-  "main": "app/index.js",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/taylorharwin/generator-sqangular"
-  },
-  "author": "Taylor Harwin <taylor.harwin@gmail.com> (https://github.com/taylorharwin)",
-  "engines": {
-    "node": ">=0.10.0"
-  },
-  "scripts": {
-    "test": "mocha"
-  },
-  "files": [
-    "app"
-  ],
-  "keywords": [
-    "yeoman-generator"
-  ],
   "dependencies": {
-    "yeoman-generator": "~0.16.0",
-    "chalk": "~0.4.0",
-    "yosay": "^0.1.0"
+  	"express": "*",
+    "bookshelf": "*",
+    "q": "*",
+    "mysql": "*"
   },
-  "devDependencies": {
-    "mocha": "*"
-  },
-  "peerDependencies": {
-    "yo": ">=1.0.0"
-  },
-  "bugs": {
-    "url": "https://github.com/taylorharwin/generator-sqangular/issues"
-  },
-  "homepage": "https://github.com/taylorharwin/generator-sqangular",
-  "directories": {
-    "test": "test"
+  "devDependencies":{
+	"gulp": "*",
+    "gulp-bower": "*",
+    "morgan": "*",
+    "body-parser": "*",
+    "tiny-lr": "*",
+    "gulp-jshint": "*",
+    "gulp-notify": "*",
+    "gulp-livereload": "*",
+    "gulp-nodemon": "*",
+    "gulp-plumber": "*",
+    "gulp-task-listing": "*",
+    "jshint-stylish": "*",
+    "gulp-concat": "*",
+    "gulp-sass": "*"
   }
 }

@@ -1,6 +1,6 @@
 angular.module('<%= name %>.main.extra', ['ngRoute'])
 
-.config(function (<%= providers %>) {
+.config(function ($stateProvider) {
   $routeProvider
     .when('/extra', {
       templateUrl: 'extra/extra.tpl.html',
