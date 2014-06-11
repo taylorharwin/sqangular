@@ -5,7 +5,10 @@
   	"express": "*",
     "bookshelf": "*",
     "q": "*",
-    "mysql": "*"
+    "knex":"*",
+    "pg":"*"
+
+    
   },
   "devDependencies":{
 	"gulp": "*",
@@ -21,6 +24,6 @@
     "gulp-task-listing": "*",
     "jshint-stylish": "*",
     "gulp-concat": "*",
-    "gulp-sass": "*"
+    "gulp-less": "*"
   }
 }
